@@ -1,0 +1,36 @@
+.container1{
+    border-style: solid;
+    width:400px;
+    height: 400px;
+    padding: 10px;
+    background-color: rgb(234, 234, 234);
+    color:black;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
+#myb{
+    
+    background-color: rgb(53, 137, 215);;
+}
+
+body{
+    background-image: url('skillset.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color:white;
+   
+}
+.profile
+{
+ 
+    border-radius: 100px;
+    height:100px;
+    width:100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+}

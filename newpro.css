@@ -1,0 +1,95 @@
+.box1{
+    background-image: url(light.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 900px;
+    padding:20px;
+    color:black;
+    font-size: 20px;
+    margin-bottom: 150px;
+    font-family: @import url(https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;800;900&display=swap);
+    body {
+      font-family: 'Inter', sans-serif;
+    };
+}
+.profile
+{
+    border-radius: 100px;
+    height:100px;
+    width:100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+}
+.box2{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 250px;
+}
+.list1{
+    margin-top: 40px;
+    text-decoration: none;
+}
+.list1:hover{
+    color:blue;
+}
+.section
+{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom:300px;
+    
+}
+#res{
+    text-decoration: none;
+    color:black;
+}
+
+#section1,#section2,#section3,#section4
+{
+    height:50px;
+    width:100px;
+}
+#section1:hover{
+    transform: scale(1.2);
+}
+#section2:hover{
+    transform: scale(1.2);
+}
+#section3:hover{
+    transform: scale(1.2);
+}
+#section4:hover{
+    transform: scale(1.2);
+}
+.section3
+{
+    margin-top: 150px;
+    margin-bottom: 150px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.myh{
+    height: 100px;
+    width:430px;
+}
+#h{
+    font-size: 40px;
+}
+#myp{
+    font-weight: 100;
+    font-size:20px;
+}
+.footer
+{
+    background-color: hsl(200, 51%, 70%);
+    height:400px;
+    margin:20px;
+    padding:20px;
+    margin-top: 150px;
+}
+.span1{
+    box-shadow: 10px 10px grey;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="log.css">
+</head>
+<body>
+    <div class="total">
+        <div class="container">
+           <b><h1 align="center" id="myh">Skill Building Workshop</h1></b>
+            <h3 align="center">The Temple of Learning!</h3>
+            <center><img src="giv.avif" alt="logo" class="profile"></center> <br>
+        </div>
+        <center>
+            <div class="container1">
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Enter the name"><br><br>
+
+                <label for="email">Username or Email</label> 
+                <input type="email" id="email" placeholder="Enter Email"><br><br>
+
+                <label for="college">Enter College</label> 
+                <input type="text" id="college" placeholder="Enter College"><br><br>
+
+                <label for="degree">Degree</label>
+                <input type="text" id="degree" placeholder="Enter Degree"><br><br>
+
+                <label for="year">Year of Passing</label>
+                <input type="text" id="year" placeholder="Enter Year of Passing"><br><br>
+
+                <span>Department: </span> 
+                <input type="checkbox" id="IT">
+                <label for="IT">Information Technology</label><br><br>
+
+                <input type="checkbox" id="computer">
+                <label for="computer">Computer Science</label><br><br>
+
+                <input type="checkbox" id="ece">
+                <label for="ece">ECE</label><br><br>
+
+                <label for="city">Enter City</label>
+                <input type="text" id="city" placeholder="Enter City"><br><br>
+
+                <button id="myb" onclick="validateForm()">Register</button>
+                <p id="myp"></p><br>
+            </div>
+        </center>
+    </div>
+
+    <script>
+        function validateForm() {
+            var name = document.getElementById("name").value.trim();
+            var email = document.getElementById("email").value.trim();
+            var college = document.getElementById("college").value.trim();
+            var degree = document.getElementById("degree").value.trim();
+            var year = document.getElementById("year").value.trim();
+            var city = document.getElementById("city").value.trim();
+            var message = document.getElementById("myp");
+            var IT = document.getElementById("IT").checked;
+            var computer = document.getElementById("computer").checked;
+            var ece = document.getElementById("ece").checked;
+
+            if (!name || !email || !college || !degree || !year || !city) {
+                message.innerHTML = "All fields are required.";
+                return;
+            }
+
+            if (!IT && !computer && !ece) {
+                message.innerHTML = "Please select at least one department.";
+                return;
+            }
+
+            message.innerHTML = "Form is valid and ready for submission!";
+        }
+    </script>
+</body>
+</html>

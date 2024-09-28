@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <!-- Root Element -->
+    <xs:element name="document">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="container" type="containerType"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Container Element -->
+    <xs:complexType name="containerType">
+        <xs:sequence>
+            <xs:element name="box1" type="box1Type"/>
+            <xs:element name="sections" type="sectionsType"/>
+            <xs:element name="mission" type="missionType"/>
+            <xs:element name="footer" type="footerType"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Box1 Type -->
+    <xs:complexType name="box1Type">
+        <xs:sequence>
+            <xs:element name="header" type="headerType"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Header Type -->
+    <xs:complexType name="headerType">
+        <xs:sequence>
+            <xs:element name="box2" type="box2Type"/>
+            <xs:element name="b2" type="b2Type"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Box2 Type -->
+    <xs:complexType name="box2Type">
+        <xs:sequence>
+            <xs:element name="profile" type="profileType"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Profile Type -->
+    <xs:complexType name="profileType">
+        <xs:sequence>
+            <xs:element name="image" type="imageType"/>
+            <xs:element name="menu" type="menuType"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Image Type -->
+    <xs:complexType name="imageType">
+        <xs:attribute name="src" type="xs:string" use="required"/>
+        <xs:attribute name="alt" type="xs:string" use="required"/>
+    </xs:complexType>
+
+    <!-- Menu Type -->
+    <xs:complexType name="menuType">
+        <xs:sequence>
+            <xs:element name="item" type="xs:string" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- B2 Type -->
+    <xs:complexType name="b2Type">
+        <xs:sequence>
+            <xs:element name="headline" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Sections Type -->
+    <xs:complexType name="sectionsType">
+        <xs:sequence>
+            <xs:element name="section" type="sectionType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Section Type -->
+    <xs:complexType name="sectionType">
+        <xs:sequence>
+            <xs:element name="title" type="xs:string"/>
+            <xs:element name="description" type="xs:string"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:string" use="required"/>
+    </xs:complexType>
+
+    <!-- Mission Type -->
+    <xs:complexType name="missionType">
+        <xs:sequence>
+            <xs:element name="headline" type="xs:string"/>
+            <xs:element name="description" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Footer Type -->
+    <xs:complexType name="footerType">
+        <xs:sequence>
+            <xs:element name="contact-info" type="xs:string"/>
+            <xs:element name="link" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>
